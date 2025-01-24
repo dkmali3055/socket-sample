@@ -129,6 +129,6 @@ app.post("/notification", (req, res) => {
   res.status(200).send("OK");
 });
 // Start the server
-server.listen(4050, () => {
+server.listen(process.env.PORT || 4050, () => {
   console.log("Server listening on port 4050");
 });
