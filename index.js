@@ -4,15 +4,16 @@ const { Server } = require("socket.io");
 const { StreamChat } = require("stream-chat");
 const app = express();
 const server = http.createServer(app);
+const dotenv = require("dotenv");
+dotenv.config();
 
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Types;
 const { AvatarGenerator } = require("random-avatar-generator");
 const { StreamClient } = require("@stream-io/node-sdk");
 
-const apiKey = "yw33ampaw3dj";
-const secretKey =
-  "8jkz8543y3sktayap2xm3uaygxu8xcfqqrjp7x855sxnh6nrmm57kwruu297acac";
+const apiKey = process.env.STREAM_API_KEY;
+const secretKey = process.env.STREAM_API_SECRET;
 
 client = new StreamClient(apiKey, secretKey);
 // parse json request body
