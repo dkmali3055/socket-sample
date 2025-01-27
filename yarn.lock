@@ -374,20 +374,54 @@
   dependencies:
     sparse-bitfield "^3.0.3"
 
+"@protobuf-ts/runtime-rpc@^2.9.4":
+  version "2.9.4"
+  resolved "https://registry.npmjs.org/@protobuf-ts/runtime-rpc/-/runtime-rpc-2.9.4.tgz"
+  integrity sha512-y9L9JgnZxXFqH5vD4d7j9duWvIJ7AShyBRoNKJGhu9Q27qIbchfzli66H9RvrQNIFk5ER7z1Twe059WZGqERcA==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.9.4"
+
+"@protobuf-ts/runtime@^2.9.4":
+  version "2.9.4"
+  resolved "https://registry.npmjs.org/@protobuf-ts/runtime/-/runtime-2.9.4.tgz"
+  integrity sha512-vHRFWtJJB/SiogWDF0ypoKfRIZ41Kq+G9cEFj6Qm1eQaAhJ1LDFvgZ7Ja4tb3iLOQhz0PaoPnnOijF1qmEqTxg==
+
+"@protobuf-ts/twirp-transport@^2.9.4":
+  version "2.9.4"
+  resolved "https://registry.npmjs.org/@protobuf-ts/twirp-transport/-/twirp-transport-2.9.4.tgz"
+  integrity sha512-hoLHHVn1GgLyRVxDW9f0QKG24u/T/hLC0D97cV18OLyeC6Ibsvfg6xSSgA9Q/9wtBPI9ntMU/5/XLpICUXDgDQ==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.9.4"
+    "@protobuf-ts/runtime-rpc" "^2.9.4"
+
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.2"
   resolved "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.2.tgz"
   integrity sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==
 
-"@stream-io/node-sdk@^0.4.7":
-  version "0.4.7"
-  resolved "https://registry.npmjs.org/@stream-io/node-sdk/-/node-sdk-0.4.7.tgz"
-  integrity sha512-gBcElVrfqf1TNnuHabJK2c/fugBnUAW0lGhCuVPalLlUgDxcuDhs0nseFxZ6ks2lzQMn8VL3qDtfVL1fPvWkVA==
+"@stream-io/node-sdk@^0.4.10":
+  version "0.4.10"
+  resolved "https://registry.npmjs.org/@stream-io/node-sdk/-/node-sdk-0.4.10.tgz"
+  integrity sha512-prNc/CFJclN5cySslqI+oiYvu3rUzGyK88TKnjvekGGxf3G3+yxyKuSh8HIVV3DIVi9VmIXs6tE8bdHlcm1fMQ==
   dependencies:
     "@types/jsonwebtoken" "^9.0.3"
     "@types/node" "^20.11.24"
     jsonwebtoken "^9.0.2"
     uuid "^9.0.1"
+
+"@stream-io/video-client@^1.15.5":
+  version "1.15.5"
+  resolved "https://registry.npmjs.org/@stream-io/video-client/-/video-client-1.15.5.tgz"
+  integrity sha512-8L973+aA2b5jFZbwzjXfweYQPP5RoMlUOT5YvpLXw7RtTfnhq+UNkjOSbNOtqMbsOxYc3/zZLINcSuQ5NFKprQ==
+  dependencies:
+    "@protobuf-ts/runtime" "^2.9.4"
+    "@protobuf-ts/runtime-rpc" "^2.9.4"
+    "@protobuf-ts/twirp-transport" "^2.9.4"
+    axios "^1.7.7"
+    rxjs "~7.8.1"
+    sdp-transform "^2.14.1"
+    ua-parser-js "^1.0.36"
+    webrtc-adapter "^8.2.3"
 
 "@types/bn.js@^5.1.0", "@types/bn.js@5.1.1":
   version "5.1.1"
@@ -498,7 +532,7 @@ asynckit@^0.4.0:
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
-axios@^1.6.0:
+axios@^1.6.0, axios@^1.7.7:
   version "1.7.9"
   resolved "https://registry.npmjs.org/axios/-/axios-1.7.9.tgz"
   integrity sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==
@@ -1684,6 +1718,13 @@ rlp@^2.2.4:
   dependencies:
     bn.js "^5.2.0"
 
+rxjs@~7.8.1:
+  version "7.8.1"
+  resolved "https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz"
+  integrity sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==
+  dependencies:
+    tslib "^2.1.0"
+
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0, safe-buffer@~5.2.0, safe-buffer@5.2.1:
   version "5.2.1"
   resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz"
@@ -1698,6 +1739,16 @@ scrypt-js@^3.0.0, scrypt-js@3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/scrypt-js/-/scrypt-js-3.0.1.tgz"
   integrity sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==
+
+sdp-transform@^2.14.1:
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/sdp-transform/-/sdp-transform-2.15.0.tgz"
+  integrity sha512-KrOH82c/W+GYQ0LHqtr3caRpM3ITglq3ljGUIb8LTki7ByacJZ9z+piSGiwZDsRyhQbYBOBJgr2k6X4BZXi3Kw==
+
+sdp@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.npmjs.org/sdp/-/sdp-3.2.0.tgz"
+  integrity sha512-d7wDPgDV3DDiqulJjKiV2865wKsJ34YI+NDREbm+FySq6WuKOikwyNQcm+doLAZ1O6ltdO0SeKle2xMpN3Brgw==
 
 secp256k1@^4.0.1:
   version "4.0.3"
@@ -1916,6 +1967,11 @@ tr46@^4.1.1:
   dependencies:
     punycode "^2.3.0"
 
+tslib@^2.1.0:
+  version "2.8.1"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz"
+  integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
+
 type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz"
@@ -1930,6 +1986,11 @@ typeid-js@^1.1.0:
   integrity sha512-SS0GEC0/0OJ06IvGEbqc6dVa5WwQN4mDq2UG9x2D7f+CD2X/b+p2xfEPNli0DO23lmeVl45bFt/bAOQa0GB4fg==
   dependencies:
     uuid "^10.0.0"
+
+ua-parser-js@^1.0.36:
+  version "1.0.40"
+  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-1.0.40.tgz"
+  integrity sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==
 
 undefsafe@^2.0.5:
   version "2.0.5"
@@ -1980,6 +2041,13 @@ webidl-conversions@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-7.0.0.tgz"
   integrity sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==
+
+webrtc-adapter@^8.2.3:
+  version "8.2.3"
+  resolved "https://registry.npmjs.org/webrtc-adapter/-/webrtc-adapter-8.2.3.tgz"
+  integrity sha512-gnmRz++suzmvxtp3ehQts6s2JtAGPuDPjA1F3a9ckNpG1kYdYuHWYpazoAnL9FS5/B21tKlhkorbdCXat0+4xQ==
+  dependencies:
+    sdp "^3.2.0"
 
 whatwg-url@^13.0.0:
   version "13.0.0"

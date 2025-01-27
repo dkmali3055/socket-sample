@@ -1,7 +1,7 @@
 const express = require("express");
 const http = require("http");
 const dotenv = require("dotenv");
-const { StreamVideo } = require("@stream-io/video-node");
+const { StreamClient } = require("@stream-io/node-sdk");
 const { AvatarGenerator } = require("random-avatar-generator");
 const mongoose = require("mongoose");
 
@@ -15,7 +15,7 @@ const apiKey = process.env.STREAM_API_KEY;
 const secretKey = process.env.STREAM_API_SECRET;
 
 // Initialize Stream Video client
-const videoClient = new StreamVideo(apiKey, secretKey);
+const videoClient = new StreamClient(apiKey, secretKey, { timeout: 3000 });
 
 // Avatar generator for random avatars
 const generator = new AvatarGenerator();
@@ -55,7 +55,7 @@ app.post("/create-user", async (req, res) => {
     };
 
     // Create or update the user in Stream Video
-    await videoClient.upsertUser(newUser);
+    await videoClient.upsertUsers([newUser]);
 
     console.log("User successfully created in Stream Video:", newUser);
     res.json({ user: newUser });
