@@ -40,6 +40,7 @@ const createObjectId = (id) => {
 app.post("/create-user", async (req, res) => {
   try {
     const { userId, username } = req.body;
+    console.log("🚀 ~ app.post create-user ~ req.body:", req.body);
 
     if (!userId || !username) {
       return res
@@ -48,7 +49,7 @@ app.post("/create-user", async (req, res) => {
     }
 
     const newUser = {
-      id: userId.toString(),
+      id: typeof userId === "string" ? userId : userId.toString(),
       role: "user", // Adjust role if needed
       name: username,
       image: generator.generateRandomAvatar(),
