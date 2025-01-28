@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stream-io/node-sdk": "^0.4.7",
+    "@stream-io/node-sdk": "^0.4.10",
+    "@stream-io/video-client": "^1.15.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "elliptic": "^6.5.7",
