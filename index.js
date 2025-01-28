@@ -107,6 +107,7 @@ const generator = new AvatarGenerator();
 app.post("/create-user", async (req, res) => {
   try {
     const { userId, username } = req.body;
+    console.log("🚀 ~ app.post create-user ~ req.body:", req.body);
     const newUser = {
       id: typeof userId === "string" ? userId : userId.toString(),
       role: "user",
